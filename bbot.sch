@@ -928,7 +928,7 @@ MELF 0.10 W</description>
 <rectangle x1="0.6858" y1="-0.7112" x2="1.0414" y2="0.7112" layer="51" rot="R180"/>
 <rectangle x1="-0.1999" y1="-0.5999" x2="0.1999" y2="0.5999" layer="35"/>
 </package>
-<package name="BB-HC06" urn="urn:adsk.eagle:footprint:8285/1" locally_modified="yes" library_version="2" library_locally_modified="yes">
+<package name="BB-HC06" urn="urn:adsk.eagle:footprint:37312983/1" library_version="3" library_locally_modified="yes">
 <description>&lt;b&gt;BLUETOOTH&lt;/b&gt;</description>
 <wire x1="-4.445" y1="1.27" x2="-3.175" y2="1.27" width="0.1524" layer="21"/>
 <wire x1="-3.175" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
@@ -963,14 +963,29 @@ MELF 0.10 W</description>
 <text x="-5.08" y="2.54" size="1.27" layer="25" ratio="10" align="center-left">BT</text>
 <text x="-1.27" y="2.54" size="1.27" layer="27" ratio="10" align="center-left">&gt;VALUE</text>
 <text x="5.334" y="-0.635" size="1.27" layer="21" ratio="10"></text>
+<text x="-3.81" y="-1.905" size="0.4064" layer="25" font="vector" ratio="10" align="center">5V</text>
+<text x="-1.27" y="-1.905" size="0.4064" layer="25" font="vector" ratio="10" align="center">GND</text>
+<text x="1.27" y="-1.905" size="0.4064" layer="25" font="vector" ratio="10" align="center">TX</text>
+<text x="3.81" y="-1.905" size="0.4064" layer="25" font="vector" ratio="10" align="center">RX</text>
 <rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
 <rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
 <rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
 <rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
-<text x="-3.81" y="-2.54" size="0.4064" layer="25" font="vector" ratio="10" align="center">5V</text>
-<text x="-1.27" y="-2.54" size="0.4064" layer="25" font="vector" ratio="10" align="center">GND</text>
-<text x="1.27" y="-2.54" size="0.4064" layer="25" font="vector" ratio="10" align="center">TX</text>
-<text x="3.81" y="-2.54" size="0.4064" layer="25" font="vector" ratio="10" align="center">RX</text>
+</package>
+<package name="BB-LM2596" urn="urn:adsk.eagle:footprint:37312980/1" locally_modified="yes" library_version="3" library_locally_modified="yes">
+<pad name="IN+" x="1.905" y="1.5875" drill="1" diameter="2.1844" shape="octagon"/>
+<pad name="IN-" x="19.05" y="1.5875" drill="1" diameter="2.1844" shape="octagon"/>
+<pad name="OUT+" x="1.905" y="41.6433" drill="1" diameter="2.1844" shape="octagon"/>
+<pad name="OUT-" x="19.05" y="41.5925" drill="1" diameter="2.1844" shape="octagon"/>
+<wire x1="0" y1="43.18" x2="20.955" y2="43.18" width="0.127" layer="21"/>
+<wire x1="20.955" y1="43.18" x2="20.955" y2="0" width="0.127" layer="21"/>
+<wire x1="20.955" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="43.18" width="0.127" layer="21"/>
+<text x="1.905" y="40.005" size="0.508" layer="21" font="vector" align="center">OUT+</text>
+<text x="19.05" y="40.005" size="0.508" layer="21" font="vector" align="center">OUT-</text>
+<text x="19.05" y="3.175" size="0.508" layer="21" font="vector" align="center">IN-</text>
+<text x="1.905" y="3.175" size="0.508" layer="21" font="vector" align="center">IN+</text>
+<text x="3.81" y="22.86" size="1.27" layer="51">LM2596 MODULE</text>
 </package>
 </packages>
 <packages3d>
@@ -986,10 +1001,15 @@ MELF 0.10 W</description>
 <packageinstance name="BB-SWITCH"/>
 </packageinstances>
 </package3d>
-<package3d name="MA04-1" urn="urn:adsk.eagle:package:8337/1" type="box" library_version="2" library_locally_modified="yes">
-<description>PIN HEADER</description>
+<package3d name="MA04-1" urn="urn:adsk.eagle:package:37312985/1" type="box" library_version="3" library_locally_modified="yes">
+<description>&lt;b&gt;BLUETOOTH&lt;/b&gt;</description>
 <packageinstances>
 <packageinstance name="BB-HC06"/>
+</packageinstances>
+</package3d>
+<package3d name="BB-LM2596" urn="urn:adsk.eagle:package:37312984/1" type="box" library_version="3" library_locally_modified="yes">
+<packageinstances>
+<packageinstance name="BB-LM2596"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1014,7 +1034,7 @@ MELF 0.10 W</description>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 </symbol>
-<symbol name="BB-HC06" library_version="2" library_locally_modified="yes">
+<symbol name="BB-HC06" urn="urn:adsk.eagle:symbol:37312982/1" library_version="3" library_locally_modified="yes">
 <wire x1="3.81" y1="-7.62" x2="-1.27" y2="-7.62" width="0.4064" layer="94"/>
 <wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.6096" layer="94"/>
 <wire x1="1.27" y1="-2.54" x2="2.54" y2="-2.54" width="0.6096" layer="94"/>
@@ -1029,6 +1049,20 @@ MELF 0.10 W</description>
 <pin name="2" x="7.62" y="-2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="3" x="7.62" y="0" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="4" x="7.62" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+<symbol name="BB-LM2596" urn="urn:adsk.eagle:symbol:37312981/1" locally_modified="yes" library_version="3" library_locally_modified="yes">
+<pin name="IN+" x="-20.32" y="15.24" visible="off" length="short"/>
+<pin name="IN-" x="-20.32" y="7.62" visible="off" length="short"/>
+<pin name="OUT+" x="-5.08" y="15.24" visible="off" length="short" rot="R180"/>
+<pin name="OUT-" x="-5.08" y="7.62" visible="off" length="short" rot="R180"/>
+<wire x1="-17.78" y1="15.24" x2="-17.78" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="15.24" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="15.24" x2="-17.78" y2="15.24" width="0.254" layer="94"/>
+<text x="-17.145" y="13.97" size="1.27" layer="95" align="center-left">IN+</text>
+<text x="-8.255" y="13.97" size="1.27" layer="95" align="center-right">OUT+</text>
+<text x="-17.145" y="8.89" size="1.27" layer="95" align="center-left">IN-</text>
+<text x="-8.255" y="8.89" size="1.27" layer="95" align="center-right">OUT-</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1081,7 +1115,7 @@ MELF 0.10 W</description>
 </pinmapping>
 </spice>
 </deviceset>
-<deviceset name="BB-HC06" prefix="SV" uservalue="yes" library_version="2" library_locally_modified="yes">
+<deviceset name="BB-HC06" urn="urn:adsk.eagle:component:37312987/1" locally_modified="yes" prefix="SV" uservalue="yes" library_version="3" library_locally_modified="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="BB-HC06" x="0" y="0"/>
@@ -1095,7 +1129,7 @@ MELF 0.10 W</description>
 <connect gate="1" pin="4" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8337/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:37312985/1"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -1105,6 +1139,27 @@ MELF 0.10 W</description>
 <attribute name="OC_NEWARK" value="unknown" constant="no"/>
 <attribute name="POPULARITY" value="41" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BB-LM2596" urn="urn:adsk.eagle:component:37312986/1" locally_modified="yes" library_version="3" library_locally_modified="yes">
+<gates>
+<gate name="G$1" symbol="BB-LM2596" x="17.78" y="-7.62"/>
+</gates>
+<devices>
+<device name="" package="BB-LM2596">
+<connects>
+<connect gate="G$1" pin="IN+" pad="IN+"/>
+<connect gate="G$1" pin="IN-" pad="IN-"/>
+<connect gate="G$1" pin="OUT+" pad="OUT+"/>
+<connect gate="G$1" pin="OUT-" pad="OUT-"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:37312984/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -1120,19 +1175,12 @@ MELF 0.10 W</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<groups>
-<schematic_group name="RV"/>
-</groups>
 <parts>
-<part name="RV1IN+" library="adafruit" deviceset="PINHD-1X1" device=""/>
-<part name="RV1IN-" library="adafruit" deviceset="PINHD-1X1" device=""/>
-<part name="RV1OUT+" library="adafruit" deviceset="PINHD-1X1" device=""/>
-<part name="RV1OUT-" library="adafruit" deviceset="PINHD-1X1" device=""/>
 <part name="RV2IN-" library="adafruit" deviceset="PINHD-1X1" device=""/>
 <part name="RV2IN+" library="adafruit" deviceset="PINHD-1X1" device=""/>
 <part name="RV2OUT+" library="adafruit" deviceset="PINHD-1X1" device=""/>
 <part name="RV2OUT-" library="adafruit" deviceset="PINHD-1X1" device=""/>
-<part name="BT" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-HC06" device="" package3d_urn="urn:adsk.eagle:package:8337/1" value="5V"/>
+<part name="BT" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-HC06" device="" package3d_urn="urn:adsk.eagle:package:37312985/1" value="5V"/>
 <part name="D1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA06-1" device="" package3d_urn="urn:adsk.eagle:package:8340/1"/>
 <part name="D2" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA06-1" device="" package3d_urn="urn:adsk.eagle:package:8340/1"/>
 <part name="BAT" library="adafruit" deviceset="JST_2PIN" device="-THM" value="VIN"/>
@@ -1151,28 +1199,13 @@ MELF 0.10 W</description>
 <part name="L1" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-RES" device="M0805" package3d_urn="urn:adsk.eagle:package:37248413/1"/>
 <part name="R2" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-RES" device="M0805" package3d_urn="urn:adsk.eagle:package:37248413/1"/>
 <part name="L2" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-RES" device="M0805" package3d_urn="urn:adsk.eagle:package:37248413/1"/>
+<part name="U$1" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-LM2596" device="" package3d_urn="urn:adsk.eagle:package:37312984/1"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="RV1IN+" gate="G$1" x="38.1" y="0" smashed="yes" grouprefs="RV">
-<attribute name="NAME" x="31.75" y="3.175" size="1.778" layer="95"/>
-<attribute name="VALUE" x="31.75" y="-5.08" size="1.778" layer="96"/>
-</instance>
-<instance part="RV1IN-" gate="G$1" x="38.1" y="-15.24" smashed="yes" grouprefs="RV">
-<attribute name="NAME" x="31.75" y="-12.065" size="1.778" layer="95"/>
-<attribute name="VALUE" x="31.75" y="-20.32" size="1.778" layer="96"/>
-</instance>
-<instance part="RV1OUT+" gate="G$1" x="50.8" y="0" smashed="yes" grouprefs="RV">
-<attribute name="NAME" x="44.45" y="3.175" size="1.778" layer="95"/>
-<attribute name="VALUE" x="44.45" y="-5.08" size="1.778" layer="96"/>
-</instance>
-<instance part="RV1OUT-" gate="G$1" x="50.8" y="-15.24" smashed="yes" grouprefs="RV">
-<attribute name="NAME" x="44.45" y="-12.065" size="1.778" layer="95"/>
-<attribute name="VALUE" x="44.45" y="-20.32" size="1.778" layer="96"/>
-</instance>
 <instance part="RV2IN-" gate="G$1" x="71.12" y="-15.24" smashed="yes">
 <attribute name="NAME" x="64.77" y="-12.065" size="1.778" layer="95"/>
 <attribute name="VALUE" x="64.77" y="-20.32" size="1.778" layer="96"/>
@@ -1262,6 +1295,7 @@ MELF 0.10 W</description>
 <attribute name="NAME" x="77.2414" y="-8.89" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="82.042" y="-8.89" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="U$1" gate="G$1" x="53.34" y="-17.78" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -1274,14 +1308,15 @@ MELF 0.10 W</description>
 <wire x1="68.58" y1="0" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
 <label x="22.86" y="7.62" size="1.778" layer="95"/>
 <junction x="22.86" y="7.62"/>
-<pinref part="RV1IN+" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="0" x2="22.86" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="0" x2="22.86" y2="0" width="0.1524" layer="91"/>
 <junction x="22.86" y="0"/>
+<wire x1="33.02" y1="0" x2="22.86" y2="0" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="7.62" x2="17.78" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="SW1" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="12.7" x2="12.7" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="L1" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="G$1" pin="IN+"/>
+<wire x1="33.02" y1="-2.54" x2="33.02" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -1292,9 +1327,9 @@ MELF 0.10 W</description>
 <wire x1="48.26" y1="33.02" x2="48.26" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="66.04" x2="35.56" y2="66.04" width="0.1524" layer="91"/>
 <label x="48.26" y="33.02" size="1.778" layer="95"/>
-<pinref part="RV1OUT+" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="33.02" x2="48.26" y2="0" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="33.02" x2="48.26" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="48.26" y="33.02"/>
+<pinref part="U$1" gate="G$1" pin="OUT+"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1331,8 +1366,6 @@ MELF 0.10 W</description>
 <wire x1="68.58" y1="-20.32" x2="68.58" y2="-15.24" width="0.1524" layer="91"/>
 <junction x="68.58" y="-20.32"/>
 <wire x1="48.26" y1="-20.32" x2="68.58" y2="-20.32" width="0.1524" layer="91"/>
-<pinref part="RV1OUT-" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="-15.24" x2="48.26" y2="-20.32" width="0.1524" layer="91"/>
 <junction x="48.26" y="-20.32"/>
 <pinref part="D2" gate="1" pin="3"/>
 <wire x1="40.64" y1="63.5" x2="35.56" y2="63.5" width="0.1524" layer="91"/>
@@ -1343,13 +1376,11 @@ MELF 0.10 W</description>
 <wire x1="40.64" y1="-20.32" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-20.32" x2="48.26" y2="-20.32" width="0.1524" layer="91"/>
 <junction x="40.64" y="-20.32"/>
-<pinref part="RV1IN-" gate="G$1" pin="1"/>
-<wire x1="35.56" y1="-20.32" x2="35.56" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="-20.32" x2="40.64" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="35.56" y="-20.32"/>
+<wire x1="33.02" y1="-20.32" x2="40.64" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="33.02" y="-20.32"/>
 <wire x1="12.7" y1="-20.32" x2="22.86" y2="-20.32" width="0.1524" layer="91"/>
 <label x="38.1" y="15.24" size="1.778" layer="95"/>
-<wire x1="22.86" y1="-20.32" x2="35.56" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="-20.32" x2="33.02" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="-20.32" x2="93.98" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="-20.32" x2="93.98" y2="15.24" width="0.1524" layer="91"/>
 <junction x="86.36" y="-20.32"/>
@@ -1374,6 +1405,10 @@ MELF 0.10 W</description>
 <junction x="22.86" y="-20.32"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <junction x="78.74" y="-20.32"/>
+<pinref part="U$1" gate="G$1" pin="OUT-"/>
+<wire x1="48.26" y1="-10.16" x2="48.26" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="IN-"/>
+<wire x1="33.02" y1="-20.32" x2="33.02" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -1589,11 +1624,6 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
-</note>
-<note version="9.5" severity="warning">
-Since Version 9.5, EAGLE supports persistent groups with
-schematics, and board files. Those persistent groups
-will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 
