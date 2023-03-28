@@ -1070,6 +1070,8 @@ Created by Harish</description>
 <part name="MOT_A" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="JST_2PIN" device="" package3d_urn="urn:adsk.eagle:package:39750906/1"/>
 <part name="MOT_B" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="JST_2PIN" device="" package3d_urn="urn:adsk.eagle:package:39750906/1"/>
 <part name="U$3" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-LM2596MINI" device="LM2596MINIV2" package3d_urn="urn:adsk.eagle:package:39782154/1"/>
+<part name="R2" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-R1205" device="" package3d_urn="urn:adsk.eagle:package:39750174/1"/>
+<part name="R3" library="my-library" library_urn="urn:adsk.eagle:library:37248401" deviceset="BB-R1205" device="" package3d_urn="urn:adsk.eagle:package:39750174/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -1114,6 +1116,12 @@ Created by Harish</description>
 <attribute name="VALUE" x="-82.55" y="45.72" size="1.778" layer="96"/>
 </instance>
 <instance part="U$3" gate="G$1" x="-2.54" y="101.6" smashed="yes"/>
+<instance part="R2" gate="G$1" x="60.96" y="38.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="59.4614" y="34.29" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="R3" gate="G$1" x="68.58" y="38.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="67.0814" y="34.29" size="1.778" layer="95" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1130,6 +1138,11 @@ Created by Harish</description>
 <wire x1="-15.24" y1="111.76" x2="-15.24" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="101.6" x2="-10.16" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="IN+"/>
+<wire x1="-15.24" y1="111.76" x2="-15.24" y2="124.46" width="0.1524" layer="91"/>
+<junction x="-15.24" y="111.76"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="-15.24" y1="124.46" x2="60.96" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="124.46" x2="60.96" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -1211,6 +1224,10 @@ Created by Harish</description>
 <junction x="-58.42" y="76.2"/>
 <pinref part="U$3" gate="G$1" pin="IN-"/>
 <pinref part="U$3" gate="G$1" pin="OUT-"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="43.18" x2="68.58" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="104.14" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
+<junction x="40.64" y="104.14"/>
 </segment>
 </net>
 <net name="12V" class="0">
@@ -1262,14 +1279,6 @@ Created by Harish</description>
 <wire x1="-63.5" y1="60.96" x2="-50.8" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="63.5" x2="-78.74" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="MOT_A" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="NODE1" gate="G$1" pin="A0"/>
-<wire x1="40.64" y1="45.72" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="A0" gate="G$1" pin="S"/>
-<wire x1="40.64" y1="45.72" x2="40.64" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1371,6 +1380,21 @@ Created by Harish</description>
 <label x="50.8" y="71.12" size="1.778" layer="95"/>
 <wire x1="22.86" y1="71.12" x2="38.1" y2="71.12" width="0.1524" layer="91"/>
 <junction x="38.1" y="71.12"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="33.02" x2="68.58" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="33.02" x2="55.88" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="33.02" x2="55.88" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="NODE1" gate="G$1" pin="A0"/>
+<wire x1="40.64" y1="45.72" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="A0" gate="G$1" pin="S"/>
+<wire x1="40.64" y1="45.72" x2="40.64" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="45.72" x2="40.64" y2="45.72" width="0.1524" layer="91"/>
+<junction x="40.64" y="45.72"/>
 </segment>
 </net>
 </nets>
